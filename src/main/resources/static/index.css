@@ -1,29 +1,36 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    background-color: green;
+    background-color: #869c66;
     overflow: hidden;
+}
+
+#content #circle {
+    background: #ff9502;
+    border-radius: 50%;
+    width: 1000px;
+    height: 1000px;
+    margin-left: 75%;
 }
 
 #center {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 400px;
     background: white;
-   border-radius: 10px;
+    border-radius: 10px;
 }
 
-#center h1{
+#center h1 {
     text-align: center;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }
 
-#login-box .login-field{
-    width: 100%;
-    padding: 0 5px;
+#login-box .login-field {
+    width: 99%;
     height: 40px;
     font-size: 16px;
     border: none;
@@ -31,3 +38,4 @@ body{
     outline: none;
     border-bottom: solid silver 2px;
 }
+
