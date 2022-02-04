@@ -11,14 +11,14 @@ public class UserController {
     UserService userService = new UserService();
 
 @GetMapping("/registerUser")
-    public String registerUser(Model model, WebRequest webRequest){
+    public String registerUser(WebRequest webRequest){
     String email = webRequest.getParameter("email");
     String username = webRequest.getParameter("username");
     String pw = webRequest.getParameter("pw");
     String confirmpw = webRequest.getParameter("pw-confirm");
 
     User user = new User(username,email,pw);
-    userService.createUser(user,confirmpw);
+    userService.createUser(email, username, pw,confirmpw);
 
 
     return "/registerUser";
