@@ -1,6 +1,5 @@
 function openModal() {
-
-    console.log("Jeg virker ikke");
+    console.log("test")
 // Get the modal
     var modal = document.getElementById("myModal");
 

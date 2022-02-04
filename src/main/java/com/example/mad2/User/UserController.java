@@ -17,7 +17,8 @@ public class UserController {
     String pw = webRequest.getParameter("pw");
     String confirmpw = webRequest.getParameter("pw-confirm");
 
-    userService.createNewUser()
+    User user = new User(username,email,pw);
+    userService.createUser(user,confirmpw);
 
 
     return "/registerUser";
