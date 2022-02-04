@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
-    <script src="register.js"></script>
+    <script th:src="@{../javascript/register.js}"></script>
+
 
 </head>
 <body>
@@ -23,25 +24,31 @@
         </div>
         <div id="reg">
             <!-- Trigger/Open The Modal -->
-            <button id="myBtn" onclick="''">Open Modal</button>
+            <button id="myBtn" onclick="openModal()">Open Modal</button>
 
             <!-- The Modal -->
-            <div id="myModal" class="modal">
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <h2>Modal Header</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p>Some text in the Modal Body</p>
-                        <p>Some other text...</p>
-                    </div>
-                    <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <input type="text" placeholder="Enter E-mail" required>
+                    <input type="text" placeholder="Username" required>
+                    <input type="text" placeholder="Password" required>
+                    <input type="text" placeholder="Confirm password" required>
+                    <input type="submit" value="Register now">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
             </div>
         </div>
     </div>
