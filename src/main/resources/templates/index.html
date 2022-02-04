@@ -12,27 +12,49 @@
 <div id="content">
     <div id="circle">
     </div>
+
     <div id="center">
         <div id="login-box">
-            <h1>Login</h1>
+            <div id="login-header">
+                <h1>Login</h1>
+            </div>
             <form autocomplete="off" method="get">
+                <p>Username</p>
                 <input class="login-field" type="text" placeholder="Enter Username" name="name">
+                <p>Password</p>
                 <input class="login-field" type="text" placeholder="Enter password" name="password">
-                <input id="login-btn" type="submit" value="Sign in">
+                <ul>
+                    <li>
+                        <input id="login-btn" type="submit" value="Sign in">
+                    </li>
+                    <li>
+                        <input  id="myBtn" onclick="openModal()" value="Register">
+                    </li>
+                </ul>
             </form>
+
+
         </div>
         <div id="reg">
-
             <!-- Trigger/Open The Modal -->
-            <button id="myBtn" onclick="openModal()">Open Modal</button>
+
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
                 <div class="modal-content">
+                    <div id="register-header">
+                        <h2>Register now</h2>
+                    </div>
                     <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
+                    <form action="" method="post">
+                        <input type="text" placeholder="Enter Email" name="Email" required>
+                        <input type="text" placeholder="Enter username" name="Username" required>
+                        <input type="text" placeholder="Enter password" name="pw" required>
+                        <input type="text" placeholder="Confirm password" name="pwConfirm" required>
+                        <input type="submit" value="register now!">
+                    </form>
                 </div>
 
             </div>

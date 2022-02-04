@@ -23,10 +23,29 @@ body {
     border-radius: 10px;
 }
 
-#center h1 {
+#center input:last-child{
+    width: 150px;
+    height: 25px;
+    background: green;
+    color: white;
+}
+
+#center button{
+    width: 150px;
+    height: 25px;
+    background: green;
+    color: white;
+}
+
+#login-header{
+    background: #ff9502;
+    height: 100%;
+}
+
+#login-header h1 {
+    height: 100%;
+    color: white;
     text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
 }
 
 #login-box .login-field {
@@ -39,19 +58,25 @@ body {
     border-bottom: solid silver 2px;
 }
 
+#register-header{
+    height: 30px;
+    background: #ff9502;
+}
+
+#register-header h2{
+    color: white;
+}
+
 .modal {
     display: none;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 37%;
     width: 400px;
+    border-radius: 10px;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
     width: 80%;
 }
 

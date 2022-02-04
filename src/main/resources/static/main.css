@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /*Fra Alpha Solution*/
+    font-family: Montserrat, sans-serif;
+    /*Slut Alpha Solution*/
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
