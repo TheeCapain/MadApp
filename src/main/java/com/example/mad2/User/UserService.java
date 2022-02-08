@@ -1,10 +1,15 @@
 package com.example.mad2.User;
 
 public class UserService {
+    private final UserRepositoryInterface userRepositoryInterface;
 
-    public User createUser(String email, String username, String pw, String pwConfirm) {
+    public UserService(UserRepositoryInterface userRepositoryInterface) {
+        this.userRepositoryInterface = userRepositoryInterface;
+    }
+
+    public void createUser(String email, String username, String pw, String pwConfirm) {
         validateMatchingPasswords(pw, pwConfirm);
-        return new User(username,email,pw);
+        userRepositoryInterface.createUser(new User(username, email, pw));
     }
 
     public String validateMatchingPasswords(String pw, String pwConfirm) {

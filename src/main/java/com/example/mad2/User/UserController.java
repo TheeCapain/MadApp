@@ -8,20 +8,19 @@ import org.springframework.web.context.request.WebRequest;
 
 @Controller
 public class UserController {
-    UserService userService = new UserService();
+    private final UserService USER_SERVICE = new UserService(new UserRepository());
 
-@GetMapping("/registerUser")
+@PostMapping("/registerUser")
     public String registerUser(WebRequest webRequest){
     String email = webRequest.getParameter("email");
     String username = webRequest.getParameter("username");
     String pw = webRequest.getParameter("pw");
-    String confirmpw = webRequest.getParameter("pw-confirm");
+    String confirmpw = webRequest.getParameter("pwConfirm");
 
-    User user = new User(username,email,pw);
-    userService.createUser(email, username, pw,confirmpw);
+    USER_SERVICE.createUser(email, username, pw,confirmpw);
 
 
-    return "/registerUser";
+    return "redirect:/";
 }
 
 
