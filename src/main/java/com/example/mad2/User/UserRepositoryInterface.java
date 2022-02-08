@@ -4,5 +4,5 @@ public interface UserRepositoryInterface {
 
      void createUser(User user);
 
-    void readUser(String email, String password);
+    User readUser(User user);
 }

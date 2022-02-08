@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
     <script th:src="@{../javascript/register.js}"></script>
+    <th:block th:include="fragments :: headfiles"></th:block>
 
 
 </head>
 <body>
+<header th:fragment=""></header>
 <div id="content">
+
     <div id="circle">
     </div>
 

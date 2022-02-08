@@ -19,9 +19,7 @@ public class UserController {
 
     USER_SERVICE.createUser(email, username, pw,confirmpw);
 
-
     return "redirect:/";
 }
-
 
 }

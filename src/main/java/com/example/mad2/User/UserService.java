@@ -11,7 +11,12 @@ public class UserService {
         validateMatchingPasswords(pw, pwConfirm);
         userRepositoryInterface.createUser(new User(username, email, pw));
     }
+/*
+    public User readUser(String name, String password){
 
+        return userRepositoryInterface.readUser( new User());
+    }
+*/
     public String validateMatchingPasswords(String pw, String pwConfirm) {
         if (pw.equals(pwConfirm)) {
             return pw;

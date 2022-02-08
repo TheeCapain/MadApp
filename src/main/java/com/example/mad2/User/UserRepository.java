@@ -4,7 +4,7 @@ import config.DBManager;
 
 import java.sql.*;
 
-public class UserRepository implements UserRepositoryInterface{
+public class UserRepository implements UserRepositoryInterface {
 
     private static Connection connection = DBManager.getConnection();
 
@@ -17,13 +17,14 @@ public class UserRepository implements UserRepositoryInterface{
             ps.setString(3, user.getPassword());
 
             ps.executeUpdate();
-        }catch (SQLException err){
+        } catch (SQLException err) {
             System.out.println(err);
         }
 
     }
 
     @Override
-    public void readUser(String email, String password) {
-
-    }}
+    public User readUser(User user) {
+        return new User();
+    }
+}
