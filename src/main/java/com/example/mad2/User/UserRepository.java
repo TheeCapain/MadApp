@@ -25,6 +25,8 @@ public class UserRepository implements UserRepositoryInterface {
 
     @Override
     public User readUser(User user) {
-        return new User();
+        return user;
     }
+
+
 }
