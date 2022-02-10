@@ -1,8 +1,8 @@
 package com.example.mad2.User;
 
-public interface UserRepositoryInterface {
+public interface UserRepositoryInterface extends JpaRepository {
 
-     void createUser(User user);
+    void createUser(User user);
 
 
 }
