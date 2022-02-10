@@ -1,14 +1,20 @@
 package com.example.mad2.User;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
-
+    @Id
+    private int id;
     private String username;
     private String Email;
     private String password;
 
-    User(String username, String email, String password){
+    User(int id, String username, String email, String password) {
+        this.id = id;
         this.username = username;
         this.Email = email;
         this.password = password;

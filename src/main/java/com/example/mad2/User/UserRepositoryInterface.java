@@ -1,8 +1,8 @@
 package com.example.mad2.User;
 
-public interface UserRepositoryInterface extends JpaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-    void createUser(User user);
+public interface UserRepositoryInterface extends JpaRepository<User,String> {
 
 
 }

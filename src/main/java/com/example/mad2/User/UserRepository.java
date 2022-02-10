@@ -4,11 +4,10 @@ import config.DBManager;
 
 import java.sql.*;
 
-public class UserRepository implements UserRepositoryInterface {
+public class UserRepository {
 
     private static Connection connection = DBManager.getConnection();
 
-    @Override
     public void createUser(User user) {
         try {
             PreparedStatement ps = connection.prepareStatement("INSERT INTO users(user_email,user_username,user_password) VALUE (?,?,?);", Statement.RETURN_GENERATED_KEYS);
