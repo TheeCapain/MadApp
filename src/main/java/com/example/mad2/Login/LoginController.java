@@ -23,9 +23,8 @@ public class LoginController {
         String email = webRequest.getParameter("name");
         String pw = webRequest.getParameter("password");
 
-        User user = USER_SERVICE.readuser()
 
 
-
+        return "/main";
     }
 }

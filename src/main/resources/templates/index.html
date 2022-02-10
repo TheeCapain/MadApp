@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/1a9ff76d50.js" crossorigin="anonymous"></script>
     <script th:src="@{../javascript/register.js}"></script>
-    <th:block th:include="fragments :: headfiles"></th:block>
 
 
 </head>
@@ -18,30 +18,27 @@
 
     <div id="center">
         <div id="login-box">
-            <div id="login-header">
-                <h1>Login</h1>
-            </div>
+            <h1>Login</h1>
             <form autocomplete="off" method="get">
-                <p>Username</p>
-                <input class="login-field" type="text" placeholder="Enter Username" name="name">
-                <p>Password</p>
-                <input class="login-field" type="text" placeholder="Enter password" name="password">
-                <ul>
-                    <li>
-                        <input id="login-btn" type="submit" value="Sign in">
-                    </li>
-                    <li>
-                        <input  id="myBtn" onclick="openModal()" value="Register">
-                    </li>
-                </ul>
+                <div class="login-field">
+                 <span class="fas fa-user">
+                    <input type="text" placeholder="Enter Username" name="name">
+                 </span>
+                </div>
+
+                <div class="login-field">
+                 <span class="fas fa-key">
+                     <input type="text" placeholder="Enter password" name="password">
+                 </span>
+                </div>
+                <input class="signInBtn" type="submit" value="Sign in">
+                <p>or</p>
             </form>
-
-
+            <button id="myBtn" onclick="openModal()">Register now</button>
         </div>
+
         <div id="reg">
             <!-- Trigger/Open The Modal -->
-
-
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
@@ -51,7 +48,7 @@
                         <h2>Register now</h2>
                     </div>
                     <span class="close">&times;</span>
-                    <form action="/registerUser" method="POST">
+                    <form action="/registerUser" method="POST" autocomplete="off">
                         <input type="text" placeholder="Enter Email" name="email" required>
                         <input type="text" placeholder="Enter username" name="username" required>
                         <input type="text" placeholder="Enter password" name="pw" required>

@@ -1,8 +1,14 @@
 body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #869c66;
     overflow: hidden;
+}
+
+#content {
+    margin: auto;
+    width: 75%;
 }
 
 #content #circle {
@@ -13,57 +19,71 @@ body {
     margin-left: 75%;
 }
 
-#center {
+
+#content #center {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 15%;
+    border: 2px solid black;
+    background: none;
+    border-radius: 10px;
+}
+
+#center h1 {
+    text-align: center;
+}
+
+#login-box span {
+    margin-left: 5px;
+    background: none;
+}
+
+#login-box .login-field {
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: solid silver 2px;
     background: white;
     border-radius: 10px;
 }
 
-#center input:last-child{
-    width: 150px;
-    height: 25px;
-    background: green;
-    color: white;
-}
-
-#center button{
-    width: 150px;
-    height: 25px;
-    background: green;
-    color: white;
-}
-
-#login-header{
-    background: #ff9502;
-    height: 100%;
-}
-
-#login-header h1 {
-    height: 100%;
-    color: white;
-    text-align: center;
-}
-
-#login-box .login-field {
-    width: 99%;
-    height: 40px;
-    font-size: 16px;
+#login-box input {
     border: none;
-    background: none;
-    outline: none;
-    border-bottom: solid silver 2px;
 }
 
-#register-header{
+#login-box .signInBtn {
+    margin-left: 25px;
+    width: 75%;
+    background: darkorange;
+    color: white;
+    border-radius: 5px;
+}
+
+#login-box p {
+    text-align: center;
+    margin: 0;
+}
+
+#login-box #myBtn {
+    margin-left: 25px;
+    width: 75%;
+    background: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+/*Register*/
+
+#register-header {
     height: 30px;
     background: #ff9502;
 }
 
-#register-header h2{
+#register-header h2 {
     color: white;
 }
 
@@ -80,7 +100,7 @@ body {
     width: 80%;
 }
 
-.modal-content input{
+.modal-content input {
     width: 90%;
 }
 
