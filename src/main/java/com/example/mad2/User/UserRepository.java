@@ -1,6 +1,8 @@
 package com.example.mad2.User;
 
 import config.DBManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.*;
 

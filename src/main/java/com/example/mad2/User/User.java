@@ -2,12 +2,16 @@ package com.example.mad2.User;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="User")
 public class User {
 
     @Id
+    @GeneratedValue
     private int id;
     private String username;
     private String Email;
@@ -18,6 +22,10 @@ public class User {
         this.username = username;
         this.Email = email;
         this.password = password;
+    }
+
+    public User() {
+
     }
 
 
