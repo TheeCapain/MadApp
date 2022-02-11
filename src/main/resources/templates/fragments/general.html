@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="">
+<head th:fragment="headfiles">
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../static/main.css">
-
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div id="header">
-    <ul>
-        <li>Home</li>
-        <li>Recipies</li>
-        <li>Meal plans</li>
-        <li>Profile</li>
-    </ul>
-</div>
+<header th:fragment="header">
+    <div id="navbar">
+        <div id="menu">
+            <ul>
+                <li>Home</li>
+                <li>Recipies</li>
+                <li>Meal plans</li>
+                <li>Profile</li>
+            </ul>
+        </div>
+
+    </div>
+
+</header>
 
 <div id="footer"></div>
 

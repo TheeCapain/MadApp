@@ -19,7 +19,7 @@
     <div id="center">
         <div id="login-box">
             <h1>Login</h1>
-            <form autocomplete="off" method="get">
+            <form action="home" autocomplete="off" method="get">
                 <div class="login-field">
                  <span class="fas fa-user">
                     <input type="text" placeholder="Enter Username" name="name">
@@ -47,8 +47,9 @@
                     <div id="register-header">
                         <h2>Register now</h2>
                     </div>
+
                     <span class="close">&times;</span>
-                    <form action="/registerUser" method="POST" autocomplete="off">
+                    <form action="/registerUser" method="post" autocomplete="off">
                         <input type="text" placeholder="Enter Email" name="email" required>
                         <input type="text" placeholder="Enter username" name="username" required>
                         <input type="text" placeholder="Enter password" name="pw" required>

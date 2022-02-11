@@ -1,12 +1,10 @@
 package com.example.mad2.User;
 
 import config.DBManager;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.*;
 
-public class UserRepository {
+public class UserRepository implements UserRepositoryInterface {
 
     private static Connection connection = DBManager.getConnection();
 
@@ -22,6 +20,30 @@ public class UserRepository {
             System.out.println(err);
         }
 
+    }
+
+    @Override
+    public User readUser(String email, String password) {
+
+        try {
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM users WHERE user_email = ? AND user_password = ?;");
+            ps.setString(1, email);
+            ps.setString(2, password);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()){
+                User user = new User();
+                user.setId(rs.getInt(1));
+                user.setEmail(rs.getString(2));
+                user.setUsername(rs.getString(3));
+                user.setPassword(rs.getString(4));
+                return user;
+            }
+        } catch (SQLException err) {
+            err.printStackTrace();
+        }
+        return null;
     }
 
 

@@ -1,31 +1,18 @@
 package com.example.mad2.User;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="User")
 public class User {
-
-    @Id
-    @GeneratedValue
     private int id;
     private String username;
     private String Email;
     private String password;
 
-    User(int id, String username, String email, String password) {
-        this.id = id;
-        this.username = username;
-        this.Email = email;
-        this.password = password;
+    public int getId() {
+        return id;
     }
 
-    public User() {
-
+    public void setId(int id) {
+        this.id = id;
     }
 
 
