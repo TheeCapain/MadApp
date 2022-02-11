@@ -22,9 +22,9 @@ public class UserController {
     }
 
     @PostMapping("/registerUser")
-    public ResponseEntity registerUser(@RequestBody User user) throws URISyntaxException {
+    public User registerUser(@RequestBody User user) throws URISyntaxException {
         System.out.println("user generated" + user);
-        User savedClient = userRepositoryInterface.save(user)
+        return userRepositoryInterface.save(user);
     }
 
 }
