@@ -21,7 +21,7 @@ public class LoginController {
     @GetMapping("/home")
     public String login(WebRequest webRequest) {
 
-        return "home";
+        return "/home";
         /*
                String email = webRequest.getParameter("name");
         String pw = webRequest.getParameter("password");

@@ -23,7 +23,9 @@
     color: black;
     background: #faf9f6;
     box-shadow: 5px 4px 14px -6px;
+    margin-bottom: 1px;
 }
+
 #navbar ul{
     display: inline-block;
     margin-top: 15px;
@@ -32,4 +34,12 @@
     font-size: 20px;
     display: inline-block;
     margin-right: 10px;
+}
+
+#footer-navbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background:gray;
 }

@@ -23,7 +23,11 @@ public class UserController {
         userService.createUser(name,email,pw,pwConfirm);
 
         return "redirect:/";
+    }
 
+    @GetMapping("profile")
+    public String profilePage(){
+        return "profile";
     }
 
 }

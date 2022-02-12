@@ -12,16 +12,31 @@
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Recipes</a></li>
-                <li><a href="">Mealplans</a> </li>
-                <li><a href="">Profile</a></li>
+                <li><a href="">Mealplans</a></li>
+                <li><a href="/profile">Profile</a></li>
             </ul>
         </div>
-
     </div>
-
 </header>
 
-<div id="footer"></div>
+<footer id="footer-navbar" th:fragment="footer">
+    <ul>
+        <li>About</li>
+        <li>Help</li>
+    </ul>
+    <div id="newsletter">
+        <input type="text" placeholder="news-box">
+    </div>
+    <div id="contact">
+        <p></p>
+        <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Email</li>
+        </ul>
+    </div>
+
+</footer>
 
 </body>
 </html>
