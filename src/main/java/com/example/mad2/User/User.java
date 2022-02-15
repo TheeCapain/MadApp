@@ -1,11 +1,25 @@
 package com.example.mad2.User;
 
 
+import com.example.mad2.Grocery.Grocery;
+
+import java.util.ArrayList;
+
 public class User {
     private int id;
     private String username;
     private String Email;
     private String password;
+    private ArrayList<Grocery> groceries;
+
+    public ArrayList<Grocery> getGroceries() {
+        return groceries;
+    }
+
+    public void setGroceries(ArrayList<Grocery> groceries) {
+        this.groceries = groceries;
+    }
+
 
     public int getId() {
         return id;
